@@ -36,17 +36,24 @@
 
 12. `sed` command is used to replace the text in a file. Use the `sed` command to replace all occurances of `et` with `ET` in the file `at.txt` file present in the folder `lorem`. You can use the following link to refer to `sed` commands [https://www.linode.com/docs/guides/manipulate-text-from-the-command-line-with-sed/]
 Check the contents of the sed.txt file using `cat` command.
+    sed 's/ET/et/' at.txt
 
 13. Find who is the system user. 
-    $ whoami
+    whoami
     gorka
     
 14. Find the current path of the directory you are in.
-    $ pwd
+    pwd
     /c/Users/gorka/IH-Labs/lab-bash/lorem-copy
 
 15. List all files with the extension `.txt` in lorem folder.
+   ls *.txt
+   I take the information from this page : https://www.howtogeek.com/448446/how-to-use-the-ls-command-on-linux/
 
 16. Count the rows in `sed.txt` file from lorem folder. Look concatenate `cat` and `wc` with the pipe `|`.
-
+   cat sed.txt | wc -l
+   I take the information from this page : https://itsfoss.com/es/comando-wc-linux/
+   
 17. Count the **files** which start with `lorem` in all directories.
+   ls -f "lorem" | wc -l
+   This is not working, but I expect to be near from the solution (;
